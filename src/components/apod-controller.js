@@ -11,8 +11,8 @@ function draw() {
         <input type='date' id='date-input' name='date' />
       </div>
       <div class='form-input toggle'>
-        <label for='hd-checkbox' data-text='HD'></label>
         <input type='checkbox' id='hd-checkbox' name='hd' />
+        <label for='hd-checkbox' data-text='HD'></label>
       </div>
       <button type='submit'>Get Image</button>
     </form>
