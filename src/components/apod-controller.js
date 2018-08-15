@@ -5,6 +5,7 @@ const apodService = new ApodService();
 const app = document.getElementById('app');
 function draw() {
   app.innerHTML = `
+    <h1 class='title'>NASA Astronomy Picture of the Day</h1>
     <form class='apod-form' onsubmit='app.controllers.apod.getPicture(event)'>
       <div class='form-input'>
         <label for='date-input'>Date</label>
@@ -53,6 +54,6 @@ export default class ApodController {
     const picture = await apodService.getPicture(
       formData.get('date') || new Date().toISOString().split('T')[0]
     );
-    drawPicture(picture);
+    drawPicture(picture, formData.get('hd'));
   }
 }

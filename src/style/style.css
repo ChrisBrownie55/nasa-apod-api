@@ -7,17 +7,26 @@ body {
     Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+.title {
+  text-align: center;
+  font-weight: 400;
+}
+
 .apod-form {
-  width: 15rem;
-  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
 }
 
 .apod-form > .form-input {
-  margin: 1rem 0;
+  margin: 0 0.5rem;
 }
 
 .toggle {
-  height: 2rem;
+  height: 1.3rem;
 }
 .toggle > input[type='checkbox'] {
   display: none;
@@ -31,6 +40,7 @@ body {
   border: solid #eee;
   position: relative;
   margin-left: 1.75rem;
+  cursor: pointer;
 }
 .toggle > label::before {
   content: attr(data-text);
@@ -57,11 +67,38 @@ body {
   background: none;
   border: none;
   color: purple;
-  padding: 0.25rem 0.5rem;
+  padding: 0.45rem 0.75rem;
   cursor: pointer;
 }
 
 .apod-form > button:hover {
   transition: background-color 0.2s;
   background-color: #eee;
+}
+
+.img-wrapper {
+  width: 35rem;
+  max-width: 100vw;
+  height: 35rem;
+  max-height: 100vw;
+  background-color: #eee;
+}
+
+.img-wrapper > img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#apod-picture {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.apod-card {
+  width: 35rem;
+  max-width: 100vw;
+  border-radius: 0.15rem;
+  overflow: hidden;
 }
